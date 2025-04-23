@@ -1,0 +1,33 @@
+﻿@model Recreation.Models.AddParkModel
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5>Добавить парк</h5>
+    </div>
+    <div class="modal-body">
+        <div id="parkForm">
+            @Html.ValidationSummary(true)
+            @Html.AntiForgeryToken()
+            <fieldset>                
+                <p>
+                    @Html.LabelFor(m => m.Name, "Наименование")
+                    <br />
+                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new {@id = "ParkName", @class = "form-control", @data_val = "true", @required = "required" } })
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Square, "Площадь")
+                    <br />
+                    @Html.EditorFor(m => m.Square, new { htmlAttributes = new { @id = "ParkSquare", @class = "form-control", @data_val = "true", @required = "required", @readonly = "true", @type = "number" } })
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.ItemTypeId, "Тип парка")
+                    <br />
+                    @Html.DropDownListFor(m => m.ItemTypeId, (IEnumerable<SelectListItem>)ViewData["parkItems"]!, new { @id = "ParkItemTypeId", @class = "form-select", @data_val = "true", @required = "required" } )
+                </p>
+                <p>
+                    <input type="button" value="Сохранить" onclick="savePark()" />
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</div>

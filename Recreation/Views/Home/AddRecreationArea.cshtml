@@ -1,0 +1,33 @@
+﻿@model Recreation.Models.AddRecreationAreaModel
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5>Добавить зону отдыха</h5>
+    </div>
+    <div class="modal-body">
+        <div id="parkForm">
+            @Html.ValidationSummary(true)
+            @Html.AntiForgeryToken()
+            <fieldset>                
+                <p>
+                    @Html.LabelFor(m => m.Name, "Наименование")
+                    <br />
+                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @id = "RecreationAreaName", @class = "form-control", @data_val = "true", @required = "required" } })
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Director, "Директор")
+                    <br />
+                    @Html.EditorFor(m => m.Director, new { htmlAttributes = new { @class = "form-control", @data_val = "true", @required = "required" } })
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.PricePerHour, "Цена, руб./час")
+                    <br />
+                    @Html.EditorFor(m => m.PricePerHour, new { htmlAttributes = new { @class = "form-control", @data_val = "true", @required = "required", @type = "number"} })
+                </p>
+                <p>
+                    <input type="button" value="Сохранить" onclick="saveRecreationArea()" />
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</div>

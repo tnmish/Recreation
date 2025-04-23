@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recreation", "Recreation\Recreation.csproj", "{121C8A3F-070E-4944-86AA-A5AC90565A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recreation.Data", "Recreation.Data\Recreation.Data.csproj", "{63EFBE9C-D40C-445F-BED9-13A7D33D5927}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{121C8A3F-070E-4944-86AA-A5AC90565A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121C8A3F-070E-4944-86AA-A5AC90565A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121C8A3F-070E-4944-86AA-A5AC90565A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121C8A3F-070E-4944-86AA-A5AC90565A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63EFBE9C-D40C-445F-BED9-13A7D33D5927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63EFBE9C-D40C-445F-BED9-13A7D33D5927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63EFBE9C-D40C-445F-BED9-13A7D33D5927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63EFBE9C-D40C-445F-BED9-13A7D33D5927}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C61E4B3-DD7E-4D30-A11C-73C042B8CD74}
+	EndGlobalSection
+EndGlobal

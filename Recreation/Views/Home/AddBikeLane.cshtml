@@ -1,0 +1,33 @@
+﻿@model Recreation.Models.AddBikeLaneModel
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5>Добавить велодорожку</h5>
+    </div>
+    <div class="modal-body">
+        <div id="parkForm">
+            @Html.ValidationSummary(true)
+            @Html.AntiForgeryToken()
+            <fieldset>                
+                <p>
+                    @Html.LabelFor(m => m.Name, "Наименование")
+                    <br />
+                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @id = "BikeLaneName", @class = "form-control", @data_val = "true", @required = "required" } })
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Length, "Длина")
+                    <br />
+                    @Html.EditorFor(m => m.Length, new { htmlAttributes = new { @id = "BikeLaneLength", @class = "form-control", @data_val = "true", @required = "required", @readonly = "true", @type = "number" } })
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.ItemTypeId, "Тип велодорожки")
+                    <br />
+                    @Html.DropDownListFor(m => m.ItemTypeId, (IEnumerable<SelectListItem>)ViewData["bikeLaneItems"]!, new { @id = "BikeLaneItemTypeId", @class = "form-select", @data_val = "true", @required = "required" } )
+                </p>
+                <p>
+                    <input type="button" value="Сохранить" onclick="saveBikeLane()" />
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</div>
